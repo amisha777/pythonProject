@@ -9,7 +9,10 @@ from app.DataBase import DataBase
 
 # Подключение к СУБД через драйвер psycopg2
 def connect_db():
-    conn = psycopg2.connect(dbname="restaurant", user="postgres", password="fvbyfufhhb777", host="localhost")
+    conn = psycopg2.connect(dbname="d7ahpk0rbq0pth",
+                            user="aanagckfygyezv",
+                            password="b68163b34754853746b81d41b1d727f52e7d86f4a4196fb346878c83f2647bed",
+                            host="ec2-34-242-89-204.eu-west-1.compute.amazonaws.com")
     return conn
 
 
@@ -30,14 +33,6 @@ def before_request():
 def close_db(error):
     if hasattr(g, 'link_db'):
         g.link_db.close()
-
-
-# данные БД
-DB_HOST = "localhost"
-DB_NAME = "restaurant"
-DB_USER = "postgres"
-DB_PASS = "fvbyfufhhb777"
-conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
 
 
 # маршрут главной страницы
